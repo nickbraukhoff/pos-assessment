@@ -2,6 +2,8 @@ group 'moxe-health'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin:'application'
+mainClassName = "com.moxe.pos.Application"
 
 sourceCompatibility = 1.8
 
