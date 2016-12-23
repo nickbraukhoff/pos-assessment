@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ceba49e2-7aee-4e2d-893c-e7347e24d4b8",
+    "name": "Skittles",
+    "packageType": "BAG",
+    "tradeType": "OTHER",
+    "grocery": true,
+    "size": "16lb",
+    "price": 16.00
+  },
+  {
+    "id": "24693cf6-f733-4251-8094-444d59eb0a13",
+    "name": "Vanilla-Hazelnut Coffee",
+    "packageType": "BAG",
+    "tradeType": "IMPORT",
+    "grocery": true,
+    "price": 11.00
+  },
+  {
+    "id": "d4bc1d2a-3794-4166-85fc-4d0f2345c073",
+    "name": "Vespa",
+    "tradeType": "IMPORT",
+    "price": 15001.25
+  }
+]
+
