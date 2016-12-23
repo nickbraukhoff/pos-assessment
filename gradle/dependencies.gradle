@@ -1,0 +1,21 @@
+ext {
+    versions = [:]
+    libs = [:]
+}
+
+versions += [
+        jacksonDatabind   : '2.8.5',
+        logBack           : "1.1.8",
+        apacheCommons     : '3.5',
+        commonsCollections: '4.0',
+        junit             : '4.11',
+        mockito           : '1.10.19'
+]
+libs += [
+        jacksonDatabind   : "com.fasterxml.jackson.core:jackson-databind:$versions.jacksonDatabind",
+        logBack           : "ch.qos.logback:logback-classic:$versions.logBack",
+        apacheCommons     : "org.apache.commons:commons-lang3:$versions.apacheCommons",
+        commonsCollections: "org.apache.commons:commons-collections4:$versions.commonsCollections",
+        junit             : "junit:junit:$versions.junit",
+        mockito           : "org.mockito:mockito-core:$versions.mockito"
+]
