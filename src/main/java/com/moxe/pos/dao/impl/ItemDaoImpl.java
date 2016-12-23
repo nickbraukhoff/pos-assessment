@@ -5,6 +5,7 @@ import com.moxe.pos.dao.FileDao;
 import com.moxe.pos.dao.ItemDao;
 import com.moxe.pos.domain.Item;
 import com.moxe.pos.exception.DataException;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -28,8 +29,12 @@ public class ItemDaoImpl extends FileDao<Map<String, Item>> implements ItemDao {
     protected void readFileAndMap() throws IOException {
         final List<Item> items = mapper.readValue(getFile(), new TypeReference<List<Item>>() {
         });
-        for (Item item : items) {
-            itemMap.put(item.getId(), item);
+        if (CollectionUtils.isNotEmpty(items)) {
+            for (Item item : items) {
+                itemMap.put(item.getId(), item);
+            }
+        } else {
+            throw new DataException("No items found in file");
         }
     }
 

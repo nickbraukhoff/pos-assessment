@@ -19,7 +19,7 @@ public class ItemDaoImplTest {
 
     @Test(expected = DataException.class)
     public void testExceptionIsThrownWhenNoDataIsFoundInFile() {
-        itemDao = new ItemDaoImpl("EmptyFile.json");
+        itemDao = new ItemDaoImpl("EmptyListFile.json");
 
     }
 
