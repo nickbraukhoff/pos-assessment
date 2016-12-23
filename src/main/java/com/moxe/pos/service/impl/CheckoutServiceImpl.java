@@ -27,15 +27,15 @@ public class CheckoutServiceImpl implements CheckoutService {
 
     public String listBasketItems(final List<BasketItem> basketItems) {
         final StringBuilder stringBuilder = new StringBuilder();
+
         if (CollectionUtils.isNotEmpty(basketItems)) {
-            for (int i = 0; i < basketItems.size(); i++) {
-                stringBuilder.append("\t " + basketItems.get(i).toString());
-                if (i != basketItems.size() - 1) {
-                    stringBuilder.append("\n");
-                }
+            for (int i = 0; i < basketItems.size() - 1; i++) {
+                stringBuilder.append("\t " + basketItems.get(i).toString()).append("\n");
             }
+            stringBuilder.append("\t " + basketItems.get(basketItems.size() - 1).toString());
         }
         return stringBuilder.toString();
+
     }
 
     public String getQualifiedSalesTax(final double salesTax) {

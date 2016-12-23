@@ -5,10 +5,12 @@ import com.moxe.pos.domain.BasketItem;
 import com.moxe.pos.dto.ItemQuantity;
 import com.moxe.pos.mapper.ItemQuantityMapper;
 import com.moxe.pos.service.BasketService;
-import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @since 12/22/16.
@@ -23,13 +25,13 @@ public class BasketServiceImpl implements BasketService {
     }
 
     public List<BasketItem> addItems(final List<ItemQuantity> itemQuantities) {
-        final List<BasketItem> basketItems = new ArrayList<BasketItem>();
-        if (CollectionUtils.isNotEmpty(itemQuantities)) {
-            for (final ItemQuantity itemQuantity : itemQuantities) {
-                basketItems.add((BasketItem) itemQuantityMapper.apply(itemDao.getItem(itemQuantity.getItemId()), itemQuantity.getQuantity()));
-            }
-        }
-
-        return basketItems;
+        return Collections.unmodifiableList(
+                Optional.ofNullable(itemQuantities).orElseGet(ArrayList::new)
+                        .stream()
+                        .map(itemQuantity -> (BasketItem)
+                                itemQuantityMapper.apply(
+                                        itemDao.getItem(itemQuantity.getItemId()), itemQuantity.getQuantity()
+                                ))
+                        .collect(Collectors.toList()));
     }
 }

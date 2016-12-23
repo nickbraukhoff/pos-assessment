@@ -10,11 +10,6 @@ public class ItemQuantity {
     public ItemQuantity() {
     }
 
-    public ItemQuantity(final String itemId, final int quantity) {
-        this.itemId = itemId;
-        this.quantity = quantity;
-    }
-
     public String getItemId() {
         return itemId;
     }
