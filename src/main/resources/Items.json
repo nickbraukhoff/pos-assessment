@@ -1,0 +1,69 @@
+[
+  {
+    "id": "ceba49e2-7aee-4e2d-893c-e7347e24d4b8",
+    "name": "Skittles",
+    "packageType": "BAG",
+    "tradeType": "OTHER",
+    "grocery": true,
+    "size": "16lb",
+    "price": 16.00
+  },
+  {
+    "id": "4869cb74-c685-44f5-9d48-d6379fbcc769",
+    "name": "Walkman",
+    "tradeType": "OTHER",
+    "price": 99.99
+  },
+  {
+    "id": "c354c622-49e6-490a-828f-4ac80cba3935",
+    "name": "Microwave Popcorn",
+    "packageType": "BAG",
+    "tradeType": "OTHER",
+    "grocery": true,
+    "price": 0.99
+  },
+  {
+    "id": "24693cf6-f733-4251-8094-444d59eb0a13",
+    "name": "Vanilla-Hazelnut Coffee",
+    "packageType": "BAG",
+    "tradeType": "IMPORT",
+    "grocery": true,
+    "price": 11.00
+  },
+  {
+    "id": "d4bc1d2a-3794-4166-85fc-4d0f2345c073",
+    "name": "Vespa",
+    "tradeType": "IMPORT",
+    "price": 15001.25
+  },
+  {
+    "id": "0ee1ce02-634b-409c-bcda-1962429ee220",
+    "name": "Almond Snickers",
+    "packageType": "CRATE",
+    "tradeType": "IMPORT",
+    "grocery": true,
+    "price": 75.99
+  },
+  {
+    "id": "e57c588e-2c8f-48d3-9f2b-fe82def4dc3f",
+    "name": "Discman",
+    "tradeType": "OTHER",
+    "price": 55.00
+  },
+  {
+    "id": "2415776f-eb8f-429b-a675-f48a98d1d7a2",
+    "name": "Bottle of Wine",
+    "tradeType": "IMPORT",
+    "price": 10.00
+  },
+  {
+    "id": "e88e591c-5396-4a88-90ec-087311f83d41",
+    "name": "Fair-Trade Coffee",
+    "packageType": "BAG",
+    "tradeType": "OTHER",
+    "grocery": true,
+    "size": "300#",
+    "price": 997.99
+  }
+]
+
